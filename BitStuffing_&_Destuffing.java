@@ -2,38 +2,35 @@ import java.util.*;
 public class  SGS
                 {
        public static void main(String[] args){
-              System.out.print("Enter the Binary message: ");
-              Scanner sn=new Scanner(System.in);
-              String data = sn.nextLine();
-              String res = new String();
-              String out=new String();
+              System.Bits_destuff.print("Enter the Binary message: ");
+              Scanner sc=new Scanner(System.in);
+              String data = sc.nextLine();
+              String Bits_stuff,Bits_destuff;
+              Bits_stuff=Bits_destuff= new String();
               int counter = 0;
               for(int i=0;i<data.length();i++)
-              {if (data.charAt(i)!='1' && data.charAt(i)!='0')
-                        {System.out.println("Enter only Binary values!!!");
-                            return;}
-                   if(data.charAt(i) == '1')
+              {    if(data.charAt(i) == '1')
                         {counter++;
-                            res = res + data.charAt(i);}
-                   else {res = res + data.charAt(i);counter = 0;
+                            Bits_stuff = Bits_stuff + data.charAt(i);}
+                   else {Bits_stuff = Bits_stuff + data.charAt(i);counter = 0;
                         }
                    if(counter == 5)
-                        {res = res + '0';
+                        {Bits_stuff = Bits_stuff + '0';
                             counter = 0;}}
-            System.out.println("Bit Stuffed Message " +res);
+            System.Bits_destuff.println("Bit Stuffed Message " +Bits_stuff);
             counter=0;
-            for(int i=0;i<res.length();i++)
-                {if(res.charAt(i) == '1')
+            for(int i=0;i<Bits_stuff.length();i++)
+                {if(Bits_stuff.charAt(i) == '1')
                         {counter++;
-                            out = out + res.charAt(i);}
+                            Bits_destuff = Bits_destuff + Bits_stuff.charAt(i);}
                     else
-                        {out = out + res.charAt(i);
+                        {Bits_destuff = Bits_destuff + Bits_stuff.charAt(i);
                              counter = 0;}
                    if(counter == 5)
-                        {if((i+2)!=res.length())
-                              out = out + res.charAt(i+2);
+                        {if((i+2)!=Bits_stuff.length())
+                              Bits_destuff = Bits_destuff + Bits_stuff.charAt(i+2);
                               else
-                              out=out + '1';
+                              Bits_destuff=Bits_destuff + '1';
                               i=i+2;
                               counter = 1;}}
-                    System.out.println("The Destuffed Message : "+out);}}
+                    System.Bits_destuff.println("The Destuffed Message : "+Bits_destuff);}}
